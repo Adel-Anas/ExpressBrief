@@ -9,10 +9,3 @@ This mini project demonstrates the implementation of a simple CRUD (Create, Read
 - Node.js installed (version 14 or higher recommended)
 - npm (Node Package Manager) installed
 
-## Setup
-
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/your-username/express-crud-api.git
-   cd express-crud-api
