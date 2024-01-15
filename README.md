@@ -46,7 +46,7 @@ DELETE /recipes/:id: Delete a recipe by ID. Provide the recipe ID in the URL.
 # Example Requests
 ## Adding a Recipe :
 ````
-POST http://localhost:3008/add  
+POST http://localhost:4000/recipes
 Content-Type: application/json
 
 {
