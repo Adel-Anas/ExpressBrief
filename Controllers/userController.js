@@ -46,7 +46,7 @@ const registerUser = async (req, res) => {
         }
         const token = jwt.sign({ _id: user._id }, process.env.JWT_SECRET, { expiresIn: '1d' });
         res.cookie("access_token",token);
-        res.status(200).json({ token, user });
+        res.status(200).json({ token });
     }catch(err){
       console.error(err);
       res.status(500).json({ message: 'Internal Server Error' });

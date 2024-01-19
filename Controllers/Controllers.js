@@ -1,6 +1,4 @@
-const bcrypt = require('bcrypt');
-const User = require('../models/userModel');
-const Post = require('../Schema/PostModel');
+const Post = require('../Models/PostModel');
 
 const getAllPosts = async (req, res) => {
   try {
@@ -45,8 +43,6 @@ const deletePost = async (req, res) => {
     res.status(500).json({ error: 'Internal Server Error' });
   }
 };
-
-
 
 module.exports = {
   getAllPosts,
