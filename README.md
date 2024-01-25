@@ -71,15 +71,102 @@ Content-Type: application/json
 `DELETE http://localhost:4000/recipes/recipe-id
 `
 
-# Contributing
-Feel free to contribute to this project by creating issues or submitting pull requests.
 
+# Authentication
 
+- *Register User:*
 
+    POST /api/register
 
+    Request Body:
 
+    json
+    {
+      "username": "example",
+      "password": "securepassword"
+    }
+    
 
+    Response:
 
+    json
+    {
+      "token": "your_jwt_token"
+    }
+    
+
+- *Login:*
+
+    POST /api/login
+
+    Request Body:
+
+    json
+    {
+      "username": "example",
+      "password": "securepassword"
+    }
+    
+
+    Response:
+
+    json
+    {
+      "token": "your_jwt_token"
+    }
+    
+
+### Endpoints
+
+- *Get All Recipes:*
+
+    GET /api/recipes
+
+    Requires authentication.
+
+- *Get Recipe by ID:*
+
+    GET /api/recipes/:id
+
+    Requires authentication.
+
+- *Create Recipe:*
+
+    POST /api/recipes
+
+    Requires authentication.
+
+    Request Body:
+
+    json
+    {
+      "title": "Spaghetti Bolognese",
+      "ingredients": ["spaghetti", "minced meat", "tomato sauce"],
+      "instructions": "Boil spaghetti. Cook minced meat. Mix with tomato sauce."
+    }
+    
+
+- *Update Recipe:*
+
+    PUT /api/recipes/:id
+
+    Requires authentication.
+
+    Request Body:
+
+    json
+    {
+      "title": "Updated Spaghetti Bolognese",
+      "ingredients": ["spaghetti", "minced meat", "tomato sauce", "extra ingredient"],
+      "instructions": "Boil spaghetti. Cook minced meat. Mix with tomato sauce. Add extra ingredient."
+    }
+    
+
+- *Delete Recipe:*
+
+    DELETE /api/recipes/:id
+
+    Requires authentication.
 
 
 
